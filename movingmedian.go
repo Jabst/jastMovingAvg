@@ -6,7 +6,7 @@ import(
 
 func getMedian(list []float64) (float64) {
 
-	sort.Slice(list, func(i, j float64) bool {
+	sort.Slice(list, func(i, j int) bool {
 		return list[i] < list[j]
 	})
 
