@@ -13,7 +13,7 @@ func getMedian(list []float64) (float64) {
 	if len(list) % 2 == 0 {
 		return (list[(len(list)/2)] + list[(len(list)/2) - 1]) / float64(2)
 	} else {
-		return list(len(list)/2)
+		return list[(len(list)/2)]
 	}
 }
 
