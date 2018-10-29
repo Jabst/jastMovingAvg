@@ -13,7 +13,7 @@ func main() {
 
 	for idx, elem := range a {
 		if elem != preCalc[idx]{
-			t.Fail()
+			testing.Fail()
 		}
 
 	}
