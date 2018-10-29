@@ -1,7 +1,7 @@
 package jastMovAvg
 
 import(
-	
+
 )
 
 func getAvg(list []float64) (float64) {
@@ -11,14 +11,14 @@ func getAvg(list []float64) (float64) {
 		acc += elem
 	}
 
-	
+
 	return acc / float64(len(list))
 }
 
 func MovingAverage(list []float64, window int) ([]float64) {
 	ret := []float64{}
 	helper := []float64{}
-	
+
 
 	for i, _ := range list {
 
@@ -26,9 +26,7 @@ func MovingAverage(list []float64, window int) ([]float64) {
 			if i + j < len (list) {
 				helper = append(helper, list[i + j])
 			}
-		}
-		log.Println(helper)
-		
+		}		
 
 		a := getAvg(helper)
 		ret = append(ret, a)
