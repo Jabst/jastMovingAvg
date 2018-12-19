@@ -28,6 +28,9 @@ func MovingMedian(list []float64, window int) ([]float64) {
 			if i + j < len (list) {
 				helper = append(helper, list[i + j])
 			}
+			if i + j >= len(list) {
+				helper = append(helper, list[i - j])
+			}
 		}
 
 		a := getMedian(helper)

@@ -25,8 +25,10 @@ func MovingAverage(list []float64, window int) ([]float64) {
 		for j := 0 ; j < window; j++ {
 			if i + j < len (list) {
 				helper = append(helper, list[i + j])
+			} else if i + j >= len(list) {
+				helper = append(helper, list[i-j])
 			}
-		}		
+		}
 
 		a := getAvg(helper)
 		ret = append(ret, a)
